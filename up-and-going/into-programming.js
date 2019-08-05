@@ -55,3 +55,37 @@ obj.a; obj["a"]; // Object property access (., [""])
 a == 2; a === 2; a !== 2; a != 2; // Equality operators
 a > 2; a < 2; a <= 2; a >= 2; // Comparison operators
 a && b; a || b; // Logical operators, used to express compound contitionals
+
+// ------------------------------------------------------------------------------
+
+// Values and Types
+// Types are representations for expressing values in programs
+
+1; // nubmer
+"string"; // string
+true; // boolean
+
+// Coercion
+// Converting the value to another type
+// JS provides several facilites for coercing
+
+a = "42"; // "42"
+b = Number(a); // 42
+
+// Implicit coercion
+a == b // JS transforms "42" to a number 42 == 42, thus giving true, this is loose equals (dosen't respect the type of variable)
+
+// ------------------------------------------------------------------------------
+
+// Code Comments
+// Always ignored by the compiler
+
+// Single line comment
+/*
+  Multi
+  Line
+  Comment
+*/
+
+a = 42; // single line comment, nothing after this in this line will compile
+a =  /* multi line, is defined and compiler will execute what is after its boundaries */ 42;
