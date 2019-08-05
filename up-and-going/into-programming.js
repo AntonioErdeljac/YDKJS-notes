@@ -89,3 +89,25 @@ a == b // JS transforms "42" to a number 42 == 42, thus giving true, this is loo
 
 a = 42; // single line comment, nothing after this in this line will compile
 a =  /* multi line, is defined and compiler will execute what is after its boundaries */ 42;
+
+// ------------------------------------------------------------------------------
+
+// Variables
+// Container for assigning values
+// Called a variable because it can vary over time
+// Used to track a value over course of running the program
+// Static Typing - declaring the type of value in variable
+// Dynamic Typing - allows a variable to hold any type of data, interchangeable
+// JS is dynamicly typed
+
+var amount = 99.99; // typeof Number
+
+amount = amount * 2; // 199.98 typeof Number
+
+amount = "$" + String(amount) // "$199.8"; typeof String
+
+const TAX_RATE = 0.08; // centralized value setting, value that is not meant to change any time
+
+amount.toFixed(2) // Object property access, toFixed is available as property in typeof Number
+
+// ------------------------------------------------------------------------------
