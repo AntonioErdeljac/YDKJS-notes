@@ -49,3 +49,65 @@ typeof a.bar; // string
 // ------------------------------------------------------------------------------
 
 // Built-In Type Methods
+
+var a = "Hello world";
+var b = 3.14734;
+
+a.length;
+a.toUpperCase();
+a.toFixed(4);
+
+// length, toUpperCase & toFixed are defined in String/Number/Boolean object wrapper prototype
+// when accessing any of these methods & properties, JS Automatically "boxes" the primitive value into its respective object wrapper form (under the hood)
+
+// ------------------------------------------------------------------------------
+
+// Comparing Values
+// Equality or Inequality
+// Result of any comparison is strictly a boolean value (true/false), regardless of comparison value types
+
+// Coerction
+// Two forms: inplicit & explicit
+// Inplicit - non obvious type conversion (happens by doing something else)
+// Explicit - obvious type conversion
+
+// Explicit
+var a = "42";
+var b = Number(a);
+
+a; // "42"
+b; // 42
+
+// Implicit
+var a = "42";
+var b = a * 1; // implicitly coerces to number
+
+a; // "42"
+b; // 42
+
+// Truthy & Falsy
+
+// falsy values:
+var a = "";
+var a = 0;
+var a = -0;
+var a = NaN;
+var a = null;
+var a = undefined;
+var a = false;
+
+// When any "falsy" value is coerced to a boolean it will become false, anything other will become true (including [], {} & () => {})
+
+// Equality
+// ==, !=, ===, !==
+// non-equality (!) should not be confused with inequality
+
+// Difference between === & ==
+
+var a = "42";
+var b = 42;
+
+a == b; // true, == operator checks for value equality with coercion
+// coerces to 42 == 42
+
+a === b; // false, === operator checks for value equality without coercion  (strict equality)
